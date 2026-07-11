@@ -1,5 +1,5 @@
 const ENDPOINT = "https://misty-bar-21cf.kd6tow.workers.dev/";
-const REFRESH_MS = 180000; // 3 minutos
+const REFRESH_MS = 180000; const $ =
 
 const $ = (id) => document.getElementById(id);
 
