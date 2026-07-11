@@ -1,1 +1,46 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#07131f"><title>KD6TOW Weather Station</title><link rel="stylesheet" href="styles.css"></head><body><main class="weather-card" aria-live="polite"><header class="header"><div><div class="callsign">KD6TOW</div><div class="station-line">SHERMAN OAKS · KCASHERM64</div></div><div class="status"><span id="statusDot" class="status-dot"></span><span id="statusText">Connecting…</span></div></header><section class="hero"><div class="temperature-block"><div class="eyebrow">CURRENT TEMPERATURE</div><div class="temperature-row"><span id="temperature" class="temperature">--</span><span class="degree">°F</span></div><div id="feelsLike" class="muted">Feels like --°F</div></div><div class="compass-wrap"><div class="compass"><span class="n">N</span><span class="e">E</span><span class="s">S</span><span class="w">W</span><div id="windArrow" class="wind-arrow">▲</div><div class="compass-center"></div></div></div><div class="wind-block"><div class="eyebrow">WIND / GUST</div><div class="wind-values"><span id="windSpeed">--</span> / <span id="windGust">--</span></div><div class="unit-line">mph</div><div id="windDirection" class="muted">--</div></div></section><section class="metrics"><article class="metric"><span>Humidity</span><strong id="humidity">--</strong></article><article class="metric"><span>Pressure</span><strong id="pressure">--</strong></article><article class="metric"><span>Dew Point</span><strong id="dewpoint">--</strong></article><article class="metric"><span>Rain Rate</span><strong id="rainRate">--</strong></article><article class="metric"><span>Rain Today</span><strong id="rainTotal">--</strong></article><article class="metric"><span>UV Index</span><strong id="uv">--</strong></article><article class="metric"><span>Solar Radiation</span><strong id="solar">--</strong></article><article class="metric"><span>Observation</span><strong id="observationTime" class="small">--</strong></article></section><footer class="footer"><span>Joe Station · Sherman Oaks, California</span><span id="lastChecked">Checked: --</span></footer><div id="errorBox" class="error" hidden></div></main><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>KD6TOW Weather Station</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="dashboard">
+  <header>
+    <div><h1>KD6TOW</h1><p>Joe Station · Sherman Oaks · KCASHERM64</p></div>
+    <div class="status"><span id="statusDot" class="status-dot"></span><span id="statusText">Connecting...</span></div>
+  </header>
+  <section class="hero">
+    <div class="temp">
+      <span class="label">Current Temperature</span>
+      <div><strong id="temperature">--</strong><span>°F</span></div>
+      <p id="feelsLike">Feels like --°F</p>
+    </div>
+    <div class="compass">
+      <span class="n">N</span><span class="e">E</span><span class="s">S</span><span class="w">W</span>
+      <div id="windArrow" class="arrow">▲</div><div class="hub"></div>
+    </div>
+    <div class="wind">
+      <span class="label">Wind / Gust</span>
+      <div><strong id="windSpeed">--</strong> / <strong id="windGust">--</strong></div>
+      <p>mph</p><p id="windDirection">--</p>
+    </div>
+  </section>
+  <section class="metrics">
+    <article><span>Humidity</span><strong id="humidity">--</strong></article>
+    <article><span>Pressure</span><strong id="pressure">--</strong></article>
+    <article><span>Dew Point</span><strong id="dewpoint">--</strong></article>
+    <article><span>Rain Rate</span><strong id="rainRate">--</strong></article>
+    <article><span>Rain Today</span><strong id="rainTotal">--</strong></article>
+    <article><span>UV Index</span><strong id="uv">--</strong></article>
+    <article><span>Solar Radiation</span><strong id="solar">--</strong></article>
+    <article><span>Observation</span><strong id="observationTime" class="small">--</strong></article>
+  </section>
+  <footer><span>Live data from KCASHERM64</span><span id="lastChecked">Checked: --</span></footer>
+  <div id="errorBox" class="error" hidden></div>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
