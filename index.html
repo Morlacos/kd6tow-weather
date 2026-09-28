@@ -12,22 +12,38 @@
     <div><h1>KD6TOW</h1><p>Joe Station · Sherman Oaks · KCASHERM64</p></div>
     <div class="status"><span id="statusDot" class="status-dot"></span><span id="statusText">Connecting...</span></div>
   </header>
+
   <section class="hero">
     <div class="temp">
       <span class="label">Current Temperature</span>
-      <div><strong id="temperature">--</strong><span>°F</span></div>
+
+      <div class="temperature-row">
+        <strong id="temperature">--</strong>
+        <span id="temperatureUnit">°F</span>
+
+        <label class="unit-switch" title="Switch temperature units">
+          <span class="unit-label">°F</span>
+          <input type="checkbox" id="unitToggle" aria-label="Switch between Fahrenheit and Celsius">
+          <span class="switch-track"><span class="switch-thumb"></span></span>
+          <span class="unit-label">°C</span>
+        </label>
+      </div>
+
       <p id="feelsLike">Feels like --°F</p>
     </div>
+
     <div class="compass">
       <span class="n">N</span><span class="e">E</span><span class="s">S</span><span class="w">W</span>
       <div id="windArrow" class="arrow">▲</div><div class="hub"></div>
     </div>
+
     <div class="wind">
       <span class="label">Wind / Gust</span>
       <div><strong id="windSpeed">--</strong> / <strong id="windGust">--</strong></div>
       <p>mph</p><p id="windDirection">--</p>
     </div>
   </section>
+
   <section class="metrics">
     <article><span>Humidity</span><strong id="humidity">--</strong></article>
     <article><span>Pressure</span><strong id="pressure">--</strong></article>
@@ -38,9 +54,11 @@
     <article><span>Solar Radiation</span><strong id="solar">--</strong></article>
     <article><span>Observation</span><strong id="observationTime" class="small">--</strong></article>
   </section>
+
   <footer><span>Live data from KCASHERM64</span><span id="lastChecked">Checked: --</span></footer>
   <div id="errorBox" class="error" hidden></div>
 </main>
+
 <script src="app.js"></script>
 </body>
 </html>
